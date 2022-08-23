@@ -8,8 +8,14 @@ const person = {
 };
 
 function postMessage(message, callBack) {
+  console.log('1.1');
   message.callBack = callBack.toString();
-  window.webkit.messageHandlers.Native.postMessage(message);
+  console.log('1.2');
+  try {
+    window.webkit.messageHandlers.Native.postMessage(message);
+  } catch(err) {
+    console.log(err);
+  }
 }
 
 
