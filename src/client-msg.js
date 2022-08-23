@@ -9,7 +9,7 @@ const person = {
 
 function postMessage(message, callBack) {
   console.log('1.1');
-  message.callBack = callBack.toString();
+  message.callBack = "(function foo(args) {\n  console.log('call back is invoked' );\n  console.log(args);\n})('hello world')";
   console.log('1.2');
   try {
     window.webkit.messageHandlers.Native.postMessage(message);
