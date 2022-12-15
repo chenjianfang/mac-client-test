@@ -1,0 +1,9 @@
+.box{
+  height: 202px;
+  border: 1px solid red;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+.child2{
+  background-color: #f3f3f3;
+}
